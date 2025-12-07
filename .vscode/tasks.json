@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build current C++ file",
+        "type": "shell",
+        "command": "/usr/bin/g++",  // Use g++ to compile
+        "args": [
+          "-g",
+          "${file}",  // Compile the currently opened file
+          "-o",
+          "${fileDirname}/a.out"  // Output as a.out in the same directory as the source file
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Compile the currently opened C++ file"
+      },
+      {
+        "label": "run current C++ file",
+        "type": "shell",
+        "command": "${fileDirname}/a.out",  // Run the compiled file
+        "group": "build",
+        "dependsOn": "build current C++ file",  // Build first, then run
+        "problemMatcher": [],
+        "detail": "Run the compiled C++ file"
+      }
+    ]
+  }
+  
