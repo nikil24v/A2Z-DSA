@@ -3,9 +3,8 @@ using namespace std;
 
 int main()
 {
-
     int num;
-    cout<<"Enter the number : "<<endl;
+    cout<<"Enter the number : "<<endl;  
     cin>>num;
 
     int i = 0;
