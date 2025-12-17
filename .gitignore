@@ -1,2 +1,7 @@
+# Ignore compiled binaries
+a.out
+**/a.out
+
+# Editor settings
 .vscode/
-a.out/
+
